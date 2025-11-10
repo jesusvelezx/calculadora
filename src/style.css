@@ -1,0 +1,202 @@
+/* ==========================================
+  RESET Y ESTILOS GENERALES
+   ========================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: #f0f0f0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  padding: 20px;
+}
+
+/* ==========================================
+  CALCULADORA
+   ========================================== */
+.calculadora {
+  background: linear-gradient(145deg, #4a5568, #3a4555);
+  border-radius: 25px;
+  box-shadow:
+    0 25px 50px rgba(0, 0, 0, 0.5),
+    inset 0 -2px 10px rgba(0, 0, 0, 0.3),
+    inset 0 2px 10px rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  width: 350px;
+  border: 3px solid #2d3748;
+}
+
+/* ==========================================
+  PANEL SOLAR
+   ========================================== */
+.panel-solar {
+  background: linear-gradient(145deg, #5a4a3a, #4a3a2a);
+  height: 35px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  box-shadow:
+    inset 0 2px 5px rgba(0, 0, 0, 0.5),
+    0 1px 2px rgba(255, 255, 255, 0.1);
+  border: 1px solid #3a2a1a;
+}
+
+/* ==========================================
+  PANTALLA (DISPLAY)
+   ========================================== */
+.display {
+  background: linear-gradient(145deg, #9cb89c, #8ca88c);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  word-wrap: break-word;
+  word-break: break-all;
+  box-shadow:
+    inset 0 3px 8px rgba(0, 0, 0, 0.3),
+    0 1px 2px rgba(255, 255, 255, 0.1);
+  border: 2px solid #7a9a7a;
+}
+
+.display-anterior {
+  color: #2a4a2a;
+  font-size: 1rem;
+  min-height: 25px;
+  margin-bottom: 5px;
+  font-family: 'Seven Segment', monospace;
+  font-weight: 400;
+  opacity: 0.6;
+  letter-spacing: 4px;
+}
+
+.display-actual {
+  color: #1a3a1a;
+  font-size: 3.2rem;
+  font-weight: 400;
+  min-height: 50px;
+  font-family: 'Seven Segment', monospace;
+  text-shadow: 0 2px 3px rgba(255, 255, 255, 0.3);
+  letter-spacing: 5px;
+}
+
+/* ==========================================
+   BOTONES
+   ========================================== */
+.botones {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 65px;
+  gap: 12px;
+}
+
+.btn {
+  border: none;
+  border-radius: 8px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  font-weight: 600;
+  box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.3),
+    inset 0 1px 2px rgba(255, 255, 255, 0.2),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow:
+    0 6px 12px rgba(0, 0, 0, 0.4),
+    inset 0 1px 2px rgba(255, 255, 255, 0.2),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(1px);
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.3),
+    inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Botones de números */
+.btn-number {
+  background: linear-gradient(145deg, #3a3a3a, #2a2a2a);
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.btn-number:hover {
+  background: linear-gradient(145deg, #4a4a4a, #3a3a3a);
+}
+
+/* Botón cero (ocupa 2 columnas) */
+.btn-zero {
+  grid-column: span 2;
+}
+
+/* Botones de operadores */
+.btn-operator {
+  background: linear-gradient(145deg, #ff9500, #e88500);
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.btn-operator:hover {
+  background: linear-gradient(145deg, #ffaa33, #ff9500);
+}
+
+/* Botones de funciones (AC, CE) */
+.btn-function {
+  background: linear-gradient(145deg, #d0d0d0, #b0b0b0);
+  color: #1a1a1a;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
+}
+
+.btn-function:hover {
+  background: linear-gradient(145deg, #e0e0e0, #c0c0c0);
+}
+
+/* Botón igual */
+.btn-equals {
+  background: linear-gradient(145deg, #5cbd5f, #4caf50);
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.btn-equals:hover {
+  background: linear-gradient(145deg, #6cd66f, #5cbd5f);
+}
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+@media (max-width: 400px) {
+  .calculadora {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .display-actual {
+    font-size: 2rem;
+  }
+
+  .btn {
+    padding: 15px;
+    font-size: 1.3rem;
+  }
+}

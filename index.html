@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible"
+	      content="ie=edge">
+	<title>Calculadora</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Seven+Segment&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="calculadora">
+			<!-- Panel solar decorativo -->
+			<div class="panel-solar"></div>
+
+			<!-- Pantalla de la calculadora -->
+			<div class="display">
+				<div class="display-anterior" id="displayAnterior"></div>
+				<div class="display-actual" id="displayActual">0</div>
+			</div>
+
+			<!-- Botones de la calculadora -->
+			<div class="botones">
+				<!-- Fila 1: Funciones especiales -->
+				<button class="btn btn-function" id="clear">AC</button>
+				<button class="btn btn-function" id="delete">CE</button>
+				<button class="btn btn-operator" id="porcentaje">%</button>
+				<button class="btn btn-operator" id="dividir">÷</button>
+
+				<!-- Fila 2: Números 7-9 y multiplicación -->
+				<button class="btn btn-number" id="siete">7</button>
+				<button class="btn btn-number" id="ocho">8</button>
+				<button class="btn btn-number" id="nueve">9</button>
+				<button class="btn btn-operator" id="multiplicar">×</button>
+
+				<!-- Fila 3: Números 4-6 y resta -->
+				<button class="btn btn-number" id="cuatro">4</button>
+				<button class="btn btn-number" id="cinco">5</button>
+				<button class="btn btn-number" id="seis">6</button>
+				<button class="btn btn-operator" id="restar">-</button>
+
+				<!-- Fila 4: Números 1-3 y suma -->
+				<button class="btn btn-number" id="uno">1</button>
+				<button class="btn btn-number" id="dos">2</button>
+				<button class="btn btn-number" id="tres">3</button>
+				<button class="btn btn-operator" id="sumar">+</button>
+
+				<!-- Fila 5: Cero, decimal e igual -->
+				<button class="btn btn-number btn-zero" id="cero">0</button>
+				<button class="btn btn-number" id="decimal">.</button>
+				<button class="btn btn-equals" id="igual">=</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- Tu archivo JavaScript -->
+	<script type="module" src="src/app.js"></script>
+</body>
+</html>
