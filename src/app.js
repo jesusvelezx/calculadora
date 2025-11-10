@@ -1,3 +1,4 @@
+import './style.css';
 // Proyecto Calculadora =>
 // Creamos las constantes globlales
 
