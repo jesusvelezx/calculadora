@@ -57,7 +57,7 @@ calculadora/
 1. Clona el repositorio o descarga el proyecto:
 
 ```bash
-git clone <url-del-repositorio>
+git clone https://github.com/jesusvelezx/calculadora
 cd calculadora
 ```
 
